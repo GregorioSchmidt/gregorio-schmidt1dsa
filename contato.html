@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<title>Contato</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/jpg" href="imagem/saopaulo.png">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<script language="javascript" type="text/javascript">
+		function validar(){
+		var email = contato.email.value;
+		var fale = contato.fale.value;
+		var nome = contato.nome.value;
+		var telefone = contato.telefone.value;
+		
+		
+		if (nome == ""){
+			alert('Por favor, preencha o campo com o seu nome!');
+			contato.nome.focus();
+		return false;
+		}
+		
+		if (telefone == ""){
+			alert('Por favor, preencha o campo com o seu número de telefone!');
+			contato.telefone.focus();
+		return false;
+		}
+		
+		if (email == ""){
+			alert('Por favor, preencha o campo com o seu email!');
+			contato.email.focus();
+		return false;
+		}
+		
+		if (fale == ""){
+			alert('Por favor, escreva seu recado!');
+			contato.fale.focus();
+		return false;
+		}
+		}
+	</script>
+</head>
+<body>
+		<nav>
+			<img src="imagem/saopaulo.png" class="img">
+				<ul class="atalhos">
+					<li><a href="index.html"><i class="material-symbols-outlined">home</i> Home</a></li>
+					<li><a href="historia.html"><i class="material-symbols-outlined">sports_mma</i> História</a></li>
+					<li><a href="titulos.html"><i class="material-symbols-outlined">trophy</i> Títulos</a></li>
+					<li><a href="galeria.html"><i class="material-symbols-outlined">photo_camera</i> Galeria</a></li>
+					<li><a href="contato.html"><i class="material-symbols-outlined">phone_enabled</i> Contato</a></li>
+				</ul>
+		</nav>
+	<div class="tabela">
+	<form name="contato" action="contatoconfirmado.html" method="post">
+		<br>
+		Nome: <input type="text" name="nome"><br><br>
+		<span class="tel">Telefone: <input type="text" name="telefone"></span><br><br>
+		Email: <input type="text" name="email"><br><br>
+		<span class="fale">Fale Conosco: 
+		 <textarea rows="15" cols="60" name="fale"></textarea> </span>
+		<br>
+		<input type="submit" onclick="return validar()" value="Enviar">
+		<input type="reset" name="limpa" value="Limpar">
+	</form>
+	</div>
+	<footer>
+    <p>Gregório Schmidt 2023 - &copyTodos os direitos reservados</p>
+    <p>Trabalho acadêmico sem fins lucrativos</p>
+	</footer>
+</body>
+</html>
